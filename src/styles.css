@@ -32,6 +32,11 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+a,
+a::after,
+a:visited,
+a:active,
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
 }
