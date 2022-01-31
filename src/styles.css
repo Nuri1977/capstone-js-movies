@@ -40,3 +40,33 @@ a:hover {
   color: inherit;
   text-decoration: inherit;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+#header {
+  width: 100%;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 30px;
+}
+
+#logo {
+  font-size: 40px;
+}
+
+#nav-bar {
+  gap: 30px;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
