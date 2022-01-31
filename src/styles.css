@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #272a31;
+  --secondary: #ec5242;
+  --terciary: #d3d3d3;
+  --brand: #d23228;
+  --success: #0d7d4d;
+  --info: #03c7e8;
+  --warning: #f0cc00;
+  --danger: #ab0d02;
+  --light: #f1ecea;
+  --dark: #00262b;
+  --white: #fff;
+  --poppins-font: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--poppins-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a::after,
+a:visited,
+a:active,
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
