@@ -41,7 +41,7 @@ const createModalHTML = (movie) => {
 
 const filterMovie = async (id) => {
   const movies = await getMovies();
-  const movie = movies.filter((movie) => movie.id === id)
+  const movie = movies.filter((movie) => movie.id === id);
   return movie;
 };
 
@@ -49,7 +49,7 @@ const closeModal = (node) => {
   node.parentNode.parentNode.remove();
 };
 
-const addEventListeners = () => {
+const modalEventListeners = () => {
   const close = document.querySelector('#modal-close-btn');
   close.addEventListener('click', () => {
     closeModal(close);
@@ -59,7 +59,17 @@ const addEventListeners = () => {
 const createModal = async (id) => {
   const movie = await filterMovie(id);
   createModalHTML(movie[0]);
-  addEventListeners(id);
+  modalEventListeners(id);
 };
 
-export default createModal;
+const commentsEventListeners = () => {
+  const buttons = document.querySelectorAll('.btn-comment');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      console.log('click ' + button.id);
+      createModal(button.id);
+    });
+  });
+};
+
+export default commentsEventListeners;
