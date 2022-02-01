@@ -75,3 +75,26 @@ a:hover {
   max-width: 80%;
   margin: auto;
 }
+
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+}
+
+hr {
+  width: 100%;
+}
+
+.credits {
+  padding: 30px;
+}
+
+.credits-name {
+  color: var(--brand);
+}
