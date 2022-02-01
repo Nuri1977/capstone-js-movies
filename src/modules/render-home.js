@@ -4,7 +4,7 @@ const renderShows = (shows) => {
   shows.forEach((show) => {
     const listItem = `
     <li>
-      <img src="${show.image.medium}" alt="show">
+      <img src="${show.image.medium}" alt="${show.name} picture">
       <div class="show-info">
         <h3>${show.name}</h3>
         <div class="show-likes">
