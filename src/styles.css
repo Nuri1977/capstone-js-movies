@@ -24,6 +24,11 @@
   --poppins-font: 'Poppins', sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: var(--poppins-font);
 }
