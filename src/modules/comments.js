@@ -1,8 +1,9 @@
 const fetchComments = (id) => {
-  const api = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/P82tXZr6R9W7y5Hb9mj4/comments?item_id=${id}`;
+  const api = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fn8dJlnUFl6vA8TtKscd/comments?item_id=${id}`;
   const comments = fetch(api)
     .then((response) => response.json())
-    .then((data) => data);
+    .then((data) => data)
+    .catch((error) => console.log(error.json()));
   return comments;
 };
 
