@@ -12,7 +12,7 @@
   <title>Movies</title>
 <script defer src="main.js"></script></head>
 
-<body class="d-flex col">
+<body id="body" class="d-flex col">
   <header id="header" class="d-flex container">
     <i class="fas fa-film" id="logo"></i>
     <ul id="nav-bar" class="d-flex">
@@ -27,7 +27,12 @@
       </li>
     </ul>
   </header>
-  <main id="main"></main>
+  <section class="main-shows">
+    <div class="container">
+      <ul id="shows-list" class="shows-list">
+      </ul>
+    </div>
+  </section>
   <footer id="footer">
     <hr>
     <div class="container left">
