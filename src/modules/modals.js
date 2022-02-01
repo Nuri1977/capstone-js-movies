@@ -25,8 +25,6 @@ const createModalHTML = (movie) => {
   <div class="modal-summary d-flex col">
   <p class="modal-info-title">Summary:</p>
   ${summary}
-  ${summary}
-  ${summary}
   </div>
   </div>`;
 
@@ -75,12 +73,10 @@ const createModal = async (id) => {
   modalEventListeners(id);
 };
 
-
 const commentsEventListeners = () => {
   const buttons = document.querySelectorAll('.btn-comment');
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      console.log(`click ${button.id}`);
       createModal(+button.id);
       preventScroll();
     });
