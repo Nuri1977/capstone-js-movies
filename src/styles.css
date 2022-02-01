@@ -52,7 +52,7 @@ a:hover {
 #header {
   width: 100%;
   margin-top: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
   font-size: 30px;
@@ -69,4 +69,9 @@ a:hover {
 .active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
 }
