@@ -28,7 +28,7 @@ const printComments = (arr) => {
     arr.forEach((comment) => {
       const item = document.createElement('p');
       item.className = 'modal-comments-items';
-      item.innerHTML = `${comment.creation_date} ${comment.username} ${comment.comment}`;
+      item.innerHTML = `<span class="comment-date">${comment.creation_date}</span> <span class="comment-username">${comment.username}:</span> ${comment.comment}`;
       commentsDiv.appendChild(item);
     });
   }
