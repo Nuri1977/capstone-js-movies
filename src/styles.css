@@ -102,3 +102,44 @@ hr {
 .left {
   text-align: left;
 }
+
+/* SECTION SHOWS */
+.main-shows {
+  background-color: var(--white);
+}
+
+.shows-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 24px 0;
+}
+
+.shows-list li img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.show-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-likes {
+  padding: 0 10px;
+  text-align: right;
+}
+
+.show-btn {
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--terciary);
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
