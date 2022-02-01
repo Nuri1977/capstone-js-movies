@@ -1,4 +1,5 @@
 import getMovies from './shows-api.js';
+import displayComments from './comments.js';
 
 const createModalHTML = (movie) => {
   const {
@@ -71,6 +72,7 @@ const createModal = async (id) => {
   const movie = await filterMovie(id);
   createModalHTML(movie[0]);
   modalEventListeners(id);
+  displayComments(id);
 };
 
 const commentsEventListeners = () => {
