@@ -79,6 +79,7 @@ const commentsEventListeners = () => {
   const buttons = document.querySelectorAll('.btn-comment');
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
+      console.log('click');
       createModal(+button.id);
       preventScroll();
     });
