@@ -24,6 +24,11 @@
   --poppins-font: 'Poppins', sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: var(--poppins-font);
 }
@@ -74,4 +79,26 @@ a:hover {
 .container {
   max-width: 80%;
   margin: auto;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+}
+
+hr {
+  width: 100%;
+}
+
+.credits {
+  padding: 30px;
+  justify-content: flex-start;
+}
+
+.credits-name {
+  color: var(--brand);
+}
+
+.left {
+  text-align: left;
 }
