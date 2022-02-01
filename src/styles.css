@@ -103,6 +103,59 @@ hr {
   text-align: left;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(43, 209, 21, 0);
+  align-items: center;
+  justify-self: center;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  overflow: auto;
+}
+
+.modal-container {
+  position: relative;
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-self: center;
+  background-color: white;
+  padding: 20px;
+  border: solid 1px black;
+}
+
+#modal-close-btn {
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  font-size: 50px;
+}
+
+.modal-container ul {
+  list-style: disc;
+}
+
+.modal-info-line1 {
+  gap: 30px;
+}
+
+.modal-info-line1 > div {
+  gap: 5px;
+}
+
+.modal-info-line2 {
+  gap: 30px;
+}
+
+.modal-info-title {
+  font-weight: bold;
+}
+
 /* SECTION SHOWS */
 .main-shows {
   background-color: var(--white);
@@ -142,4 +195,12 @@ hr {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.click {
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
