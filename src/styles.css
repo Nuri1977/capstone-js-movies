@@ -92,8 +92,13 @@ hr {
 
 .credits {
   padding: 30px;
+  justify-content: flex-start;
 }
 
 .credits-name {
   color: var(--brand);
+}
+
+.left {
+  text-align: left;
 }
