@@ -1,6 +1,12 @@
-import commentsEventListeners from './modules/modals.js';
 import './styles.css';
+import commentsEventListeners from './modules/modals.js';
+import getMovies from './modules/shows-api.js';
+import renderShows from './modules/render-home.js';
 
-// index should only have the line 1
+const startApp = async () => {
+  const shows = await getMovies();
+  renderShows(shows);
+  commentsEventListeners();
+};
 
-commentsEventListeners();
+startApp();

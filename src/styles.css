@@ -105,8 +105,8 @@ hr {
 
 .modal {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   min-height: 100%;
   width: 100%;
   background-color: rgba(43, 209, 21, 0);
@@ -154,6 +154,47 @@ hr {
 
 .modal-info-title {
   font-weight: bold;
+}
+
+/* SECTION SHOWS */
+.main-shows {
+  background-color: var(--white);
+}
+
+.shows-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 24px 0;
+}
+
+.shows-list li img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.show-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-likes {
+  padding: 0 10px;
+  text-align: right;
+}
+
+.show-btn {
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--terciary);
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .click {

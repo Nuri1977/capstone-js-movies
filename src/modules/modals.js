@@ -66,7 +66,7 @@ const commentsEventListeners = () => {
   const buttons = document.querySelectorAll('.btn-comment');
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      console.log('click ' + button.id);
+      console.log(`click ${button.id}`);
       createModal(button.id);
     });
   });
