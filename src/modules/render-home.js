@@ -1,7 +1,17 @@
-const renderShows = (shows) => {
+import getLikes from './involvment-api.js';
+
+const renderShows = async (shows) => {
   const showsContainer = document.getElementById('shows-list');
   showsContainer.innerHTML = '';
-  shows.forEach((show) => {
+
+  shows.forEach(async (show) => {
+    const resultLikes = await getLikes();
+    let numberLikes = 0;
+    await resultLikes.forEach((element) => {
+      if (element.item_id === show.id) {
+        numberLikes = element.likes;
+      }
+    });
     const listItem = `
     <li>
       <img src="${show.image.medium}" alt="${show.name} picture">
@@ -9,7 +19,7 @@ const renderShows = (shows) => {
         <h3>${show.name}</h3>
         <div class="show-likes">
           <i id="${show.id}" class="far fa-heart"></i>
-          <h4>0 likes</h4>
+          <h4>${numberLikes} likes</h4>
         </div>
       </div>
       <div class="show-btn">
