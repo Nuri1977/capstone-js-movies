@@ -13,7 +13,7 @@ const renderShows = (shows) => {
         </div>
       </div>
       <div class="show-btn">
-        <button type="button" data-id="${show.id}"  class="btn btn-comment">Comments</button>
+        <button type="button" id="${show.id}"  class="btn btn-comment">Comments</button>
       </div>
     </li>
     `;

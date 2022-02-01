@@ -25,6 +25,8 @@ const createModalHTML = (movie) => {
   <div class="modal-summary d-flex col">
   <p class="modal-info-title">Summary:</p>
   ${summary}
+  ${summary}
+  ${summary}
   </div>
   </div>`;
 
@@ -45,8 +47,19 @@ const filterMovie = async (id) => {
   return movie;
 };
 
+const preventScroll = () => {
+  const body = document.getElementById('body');
+  body.classList.add('no-scroll');
+};
+
+const allowScroll = () => {
+  const body = document.getElementById('body');
+  body.classList.remove('no-scroll');
+};
+
 const closeModal = (node) => {
   node.parentNode.parentNode.remove();
+  allowScroll();
 };
 
 const modalEventListeners = () => {
@@ -62,12 +75,14 @@ const createModal = async (id) => {
   modalEventListeners(id);
 };
 
+
 const commentsEventListeners = () => {
   const buttons = document.querySelectorAll('.btn-comment');
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       console.log(`click ${button.id}`);
-      createModal(button.id);
+      createModal(+button.id);
+      preventScroll();
     });
   });
 };
