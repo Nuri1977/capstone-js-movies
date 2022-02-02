@@ -17,4 +17,5 @@ const getMovies = async () => {
   return moviesArray;
 };
 
-export default getMovies;
+const countMovies = (shows) => shows.length;
+export { getMovies, countMovies };
