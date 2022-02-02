@@ -57,13 +57,13 @@ const printComments = (arr) => {
   modal.insertBefore(commentsDiv, formDiv);
 };
 
-const commentsCounter = () => {
-  const comments = document.querySelectorAll('.modal-comments-items');
+const commentsCounter = async () => {
+  const comments = await getComments();
   return comments.length;
 };
 
-const displayCommentsCounter = () => {
-  const commentsNumber = commentsCounter();
+const displayCommentsCounter = async () => {
+  const commentsNumber = await commentsCounter();
   const title = document.querySelector('.modal-comments-title');
   title.textContent = `Comments (${commentsNumber})`;
 };
