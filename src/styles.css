@@ -219,3 +219,39 @@ hr {
 .no-scroll {
   overflow: hidden;
 }
+
+textarea {
+  resize: none;
+}
+
+#form-container {
+  align-items: center;
+  gap: 5px;
+  width: 50%;
+}
+
+#comments-form {
+  width: 100%;
+  gap: 5px;
+}
+
+#form-name {
+  width: 50%;
+  padding: 5px;
+}
+
+#form-comment {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+}
+
+#form-button {
+  width: 30%;
+}
+
+#form-name,
+#form-comment,
+#form-button {
+  font-family: var(--poppins-font);
+}

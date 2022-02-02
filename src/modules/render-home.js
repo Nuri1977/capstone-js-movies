@@ -1,11 +1,12 @@
 import getLikes from './involvment-api.js';
+import commentsEventListeners from './modals.js';
 
 const renderShows = async (shows) => {
   const showsContainer = document.getElementById('shows-list');
   showsContainer.innerHTML = '';
+  const resultLikes = await getLikes();
 
   shows.forEach(async (show) => {
-    const resultLikes = await getLikes();
     let numberLikes = 0;
     await resultLikes.forEach((element) => {
       if (element.item_id === show.id) {
@@ -28,6 +29,7 @@ const renderShows = async (shows) => {
     </li>
     `;
     showsContainer.innerHTML += listItem;
+    commentsEventListeners();
   });
 };
 

@@ -1,5 +1,6 @@
 import getMovies from './shows-api.js';
-import displayComments from './comments.js';
+import { displayComments } from './comments.js';
+import { displayForm, reDisplayComments } from './form.js';
 
 const createModalHTML = (movie) => {
   const {
@@ -61,18 +62,25 @@ const closeModal = (node) => {
   allowScroll();
 };
 
-const modalEventListeners = () => {
+const modalEventListeners = (id) => {
   const close = document.querySelector('#modal-close-btn');
   close.addEventListener('click', () => {
     closeModal(close);
+  });
+
+  const form = document.getElementById('comments-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await reDisplayComments(id, form);
   });
 };
 
 const createModal = async (id) => {
   const movie = await filterMovie(id);
   createModalHTML(movie[0]);
-  modalEventListeners(id);
+  displayForm();
   displayComments(id);
+  modalEventListeners(id);
 };
 
 const commentsEventListeners = () => {
