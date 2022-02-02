@@ -1,4 +1,6 @@
-import { postComment, printComments, getComments } from './comments.js';
+import {
+  postComment, printComments, getComments, displayCommentsCounter,
+} from './comments.js';
 
 const displayForm = () => {
   const formDiv = document.createElement('div');
@@ -25,6 +27,7 @@ const reDisplayComments = async (id, form) => {
   setTimeout(async () => {
     const comments = await getComments(id);
     printComments(comments);
+    displayCommentsCounter();
   }, 1000);
 };
 
