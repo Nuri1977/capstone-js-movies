@@ -27,7 +27,7 @@ const reDisplayComments = async (id, form) => {
   setTimeout(async () => {
     const comments = await getComments(id);
     printComments(comments);
-    displayCommentsCounter();
+    displayCommentsCounter(id);
   }, 1000);
 };
 
