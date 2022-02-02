@@ -1,5 +1,5 @@
-import { countMovies } from './shows-api.js';
-import { shows1, shows2 } from '../../__mocks__/moc-api.js';
+import { countMovies } from '../src/modules/shows-api.js';
+import { shows1, shows2 } from '../test_env/moc-api.js';
 
 describe('Testing count of movies', () => {
   test('Count of movies should be 4', () => {
