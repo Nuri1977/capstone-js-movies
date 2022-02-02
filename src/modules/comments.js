@@ -66,7 +66,6 @@ const displayCommentsCounter = () => {
   const commentsNumber = commentsCounter();
   const title = document.querySelector('.modal-comments-title');
   title.textContent = `Comments (${commentsNumber})`;
-  console.log('changed the comments nr');
 };
 
 const displayComments = async (id) => {
