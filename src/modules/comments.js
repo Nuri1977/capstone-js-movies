@@ -1,9 +1,29 @@
+const postCommentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fn8dJlnUFl6vA8TtKscd/comments';
+
 const fetchComments = (id) => {
   const api = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fn8dJlnUFl6vA8TtKscd/comments?item_id=${id}`;
   const comments = fetch(api)
     .then((response) => response.json())
     .then((data) => data);
   return comments;
+};
+
+const postComment = async (id, form) => {
+  const name = form.name.value;
+  const comment = form.comment.value;
+  await fetch(postCommentApi, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: id,
+      username: name,
+      comment,
+    }),
+  })
+    .then(() => {
+    });
 };
 
 const getComments = async (id) => {
@@ -42,4 +62,6 @@ const displayComments = async (id) => {
   printComments(comments);
 };
 
-export default displayComments;
+export {
+  displayComments, postComment, printComments, getComments,
+};
