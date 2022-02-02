@@ -1,4 +1,4 @@
-import { getMovies } from './shows-api.js';
+import getMovies from './shows-api.js';
 import { displayComments } from './comments.js';
 import { displayForm, reDisplayComments } from './form.js';
 
