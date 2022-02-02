@@ -26,4 +26,24 @@ const getLikes = async () => {
   return likes;
 };
 
-export default getLikes;
+const postLike = (showId) => fetch(likeUrl, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ item_id: showId }),
+})
+  .then((result) => result.ok);
+
+const updateLikes = () => {
+  document.querySelectorAll('.like-div').forEach((item) => {
+    item.addEventListener('click', async (event) => {
+      const showId = +event.target.id;
+      const likesText = event.path[1].nextElementSibling.firstChild;
+      postLike(showId);
+      likesText.innerHTML = +likesText.textContent + 1;
+    });
+  });
+};
+
+export { getLikes, postLike, updateLikes };
