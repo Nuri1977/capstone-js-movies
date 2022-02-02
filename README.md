@@ -6,6 +6,8 @@
 
 ![screenshot](./src/assets/images/movies-home.jpg)
 
+This Movie app displays a list of "ocean movies", and the user is able to like any of the movies, and also read more information about each movie once he clicks on the "comments" button. Also, the user is able to leave a comment about any of the movies.
+
 Additional description about the project and its features.
 
 ## Built With
