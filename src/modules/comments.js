@@ -59,6 +59,9 @@ const printComments = (arr) => {
 
 const commentsCounter = async (id) => {
   const comments = await getComments(id);
+  if (comments === null || comments === undefined) {
+    return 0;
+  }
   return comments.length;
 };
 
