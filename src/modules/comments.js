@@ -42,7 +42,7 @@ const printComments = (arr) => {
 
   if (arr === null) {
     commentsDiv.innerHTML = `<p class="modal-comments-title">Comments (0)</p>
-    <p class="modal-comments-items">No comments...</p>`;
+    <p class="modal-no-comments">No comments...</p>`;
   } else {
     commentsDiv.innerHTML = `<p class="modal-comments-title">Comments (${arr.length})</p>`;
     arr.forEach((comment) => {
@@ -57,11 +57,25 @@ const printComments = (arr) => {
   modal.insertBefore(commentsDiv, formDiv);
 };
 
+const commentsCounter = async () => {
+  const comments = await getComments();
+  return comments.length;
+};
+
+const displayCommentsCounter = async () => {
+  const commentsNumber = await commentsCounter();
+  const title = document.querySelector('.modal-comments-title');
+  title.textContent = `Comments (${commentsNumber})`;
+};
+
 const displayComments = async (id) => {
   const comments = await getComments(id);
   printComments(comments);
+  displayCommentsCounter();
 };
 
 export {
-  displayComments, postComment, printComments, getComments,
+  displayComments, postComment,
+  printComments, getComments,
+  displayCommentsCounter,
 };
