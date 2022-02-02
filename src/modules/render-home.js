@@ -8,11 +8,15 @@ const renderShows = async (shows) => {
 
   shows.forEach(async (show) => {
     let numberLikes = 0;
-    await resultLikes.forEach((element) => {
-      if (element.item_id === show.id) {
-        numberLikes = element.likes;
-      }
-    });
+    if (resultLikes === null) {
+      numberLikes = 0;
+    } else {
+      resultLikes.forEach((element) => {
+        if (element.item_id === show.id) {
+          numberLikes = element.likes;
+        }
+      });
+    }
     const listItem = `
     <li>
       <img src="${show.image.medium}" alt="${show.name} picture">
