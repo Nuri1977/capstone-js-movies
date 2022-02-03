@@ -18,6 +18,10 @@ Additional description about the project and its features.
 - Node.js/NPM
 
 
+## Live Demo
+
+[Live Demo Link](https://nuri1977.github.io/capstone-js-movies/)
+
 ## Getting Started
 
 Clone the repository from [here](https://github.com/Nuri1977/capstone-js-movies.git)
@@ -26,6 +30,7 @@ Clone the repository from [here](https://github.com/Nuri1977/capstone-js-movies.
 npm install
 npm run build
 npm start
+npm test
 ```
 <br>
 
